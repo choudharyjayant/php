@@ -1,5 +1,4 @@
 #!/bin/bash
-
-# Stop all servers and start the server as a daemon
-#forever stopall
-nohup /home/ubuntu/php/index.js > /dev/null 2>&1 &
+cd /home/ubuntu/php/
+composer install
+nohup php -S 0.0.0.0:8000 -t web/ > /dev/null 2>&1 &
